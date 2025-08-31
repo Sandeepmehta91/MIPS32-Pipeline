@@ -72,9 +72,6 @@ Not all instructions of MIPS32 are implemented. For simplicity, only a subset of
 ## Instruction Encoding
 - `shamt`: Shift amount  
 - `funct`: Opcode extension for additional functions
-  ### Pipelined DataPath
-
-![MIPS32 Pipelined DataPath](images/pipelined_datapath.png)
 ## Pipelined Datapath
 
 Below is the 5-stage pipelined datapath used in this project:
