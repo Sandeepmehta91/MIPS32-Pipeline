@@ -66,7 +66,6 @@ J Loop // Branch to Loop unconditionally
 HLT // Halt execution 
 ```
 ## ▫️ Instruction Encoding  
-![ISR](https://user-images.githubusercontent.com/68592620/231771092-0c93aeb3-6b01-478f-a363-ecadb1ec578a.png)  
 - shamt : shift amount, funct : opcode extension for additional functions.
 - Some instructions require two register operands rs & rt as input, while some require only rs. 
 - This requirement is only identified only after the instruction is decoded. 
@@ -79,12 +78,10 @@ The instruction execution cycle contains the following 5 stages in order:
 3. EX : Execution / Effective Address Calculation  
 4. MEM : Memory Access / Branch Completion  
 5. WB : Register Write-back  
-- micro operations not shown here.
-## ▫️ Non Pipelined DataPath  
-![nonpipelined](https://user-images.githubusercontent.com/68592620/231771101-f7ea7e00-5c8c-4b6d-ae0c-a0419066e7ad.png)  
+- micro operations not shown here.  
 ## ▫️ Pipelined DataPath  
 ![pipelined](https://user-images.githubusercontent.com/68592620/231771102-12c05fa9-6e74-4835-abc6-1bd9b20e8453.png)  
-## ▫️ Verilog Design Code  
+## ▫️ Verilog Code  
 ``` 
   module pipe_MIPS32 (clk1, clk2);
   input clk1, clk2; // Two-phase clock
@@ -313,18 +310,10 @@ Testbench Code :
 endmodule
   ```  
 Waveform :  
-![waveform](https://user-images.githubusercontent.com/68592620/231780893-8d26f3ff-9b60-44a5-93a7-c40f17219e6e.png)  
 
-Console output :  
-``` R0 -  0
-R1 - 10
-R2 - 20
-R3 - 25
-R4 - 30
-R5 - 55  
-```  
+
 ## ▫️ EDAplayground Link  
-[https://edaplayground.com/x/t8Vx](https://edaplayground.com/x/t8Vx )  
+[https://edaplayground.com/x/t8Vx](https://www.edaplayground.com/x/v5Ea)  
 ## ▫️ Known problems and issues  
 Following pipelining hazards are present in the given design :  
 - Structural Hazards due to shared hardware.  
