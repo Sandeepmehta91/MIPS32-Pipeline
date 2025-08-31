@@ -69,3 +69,6 @@ Not all instructions of MIPS32 are implemented. For simplicity, only a subset of
 
 ### **Miscellaneous Instruction**
 - `HLT` → Halt execution
+## Instruction Encoding
+- `shamt`: Shift amount  
+- `funct`: Opcode extension for additional functions
