@@ -91,4 +91,9 @@ The instruction execution cycle in this MIPS32 pipeline follows **five stages**:
 
 > **Note:** Detailed micro-operations are intentionally omitted for simplicity.
 ## ▫️ Pipelined DataPath  
-![MIPS32 Pipelined DataPath](images/pipelined_datapath.png)
+## Pipelined Datapath
+
+Below is the 5-stage pipelined datapath used in this project:
+
+![MIPS32 Pipelined Datapath](pipelined_datapath.png)
+
