@@ -317,5 +317,13 @@ module test_mips32;
         #300 $finish;
     end
 endmodule
+  ```  
+
+## ▫️ EDA Playground Simulation  
+
+You can **run and test the MIPS32 pipelined design interactively** via EDAplayground:  
+
+[**Try it out on EDAplayground**](https://www.edaplayground.com/x/v5Ea)
+[**Waveform**](https://www.edaplayground.com/w/x/SK2)
 
 
