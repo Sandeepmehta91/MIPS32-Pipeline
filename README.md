@@ -46,15 +46,49 @@ The processor is built with a **classic 5-stage pipeline**, making it efficient 
 ## 🛠 Supported Instructions
 Only a **subset of MIPS32 instructions** is implemented for simplicity.
 
-### **Load/Store**
-```asm
-LW R2,124(R8)   # R2 = Mem[R8+124]
-SW R5,-10(R25)  # Mem[R25-10] = R5
-ADD  R1,R2,R3      // R1 = R2 + R3  
-ADD  R1,R2,R0      // R1 = R2 + 0  
-SUB  R12,R10,R8    // R12 = R10 – R8  
-AND  R20,R1,R5     // R20 = R1 & R5  
-OR   R11,R5,R6     // R11 = R5 | R6  
-MUL  R5,R6,R7      // R5 = R6 * R7  
-SLT  R5,R11,R12    // If R11 < R12, R5 = 1; else R5 = 0  
+- Load and Store Instructions  
+```
+LW R2,124(R8) // R2 = Mem[R8+124]  
+SW R5,-10(R25) // Mem[R25-10] = R5  
+```
+- Arithmetic and Logic Instructions (only register operands)  
+```
+ADD R1,R2,R3 // R1 = R2 + R3  
+ADD R1,R2,R0 // R1 = R2 + 0  
+SUB R12,R10,R8 // R12 = R10 – R8  
+AND R20,R1,R5 // R20 = R1 & R5  
+OR R11,R5,R6 // R11 = R5 | R6  
+MUL R5,R6,R7 // R5 = R6 * R7  
+SLT R5,R11,R12 // If R11 < R12, R5=1; else R5=0 
+```
+- Arithmetic and Logic Instructions (immediate operand)  
+```
+ADDI R1,R2,25 // R1 = R2 + 25  
+SUBI R5,R1,150 // R5 = R1 – 150  
+SLTI R2,R10,10 // If R10<10, R2=1; else R2=0 
+```
+- Branch Instructions  
+```
+BEQZ R1,Loop // Branch to Loop if R1=0  
+BNEQZ R5,Label // Branch to Label if R5!=0  
+```
+- Jump Instruction  
+```
+J Loop // Branch to Loop unconditionally  
+```
+- Miscellaneous Instructioon  
+```
+HLT // Halt execution 
+```
+### ▫️ Stages of Execution  
+The instruction execution cycle in this MIPS32 pipeline follows **five stages**:
 
+1. **IF (Instruction Fetch):** Fetch the instruction from memory.  
+2. **ID (Instruction Decode / Register Fetch):** Decode the instruction and read required registers.  
+3. **EX (Execution / Effective Address Calculation):** Perform ALU operations or calculate addresses.  
+4. **MEM (Memory Access / Branch Completion):** Access data memory or resolve branch instructions.  
+5. **WB (Write Back):** Write the result back to the register file.  
+
+> **Note:** Detailed micro-operations are intentionally omitted for simplicity.
+## ▫️ Pipelined DataPath  
+![MIPS32 Pipelined DataPath](images/pipelined_datapath.png)
