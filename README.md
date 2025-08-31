@@ -50,3 +50,11 @@ Only a **subset of MIPS32 instructions** is implemented for simplicity.
 ```asm
 LW R2,124(R8)   # R2 = Mem[R8+124]
 SW R5,-10(R25)  # Mem[R25-10] = R5
+ADD  R1,R2,R3      // R1 = R2 + R3  
+ADD  R1,R2,R0      // R1 = R2 + 0  
+SUB  R12,R10,R8    // R12 = R10 – R8  
+AND  R20,R1,R5     // R20 = R1 & R5  
+OR   R11,R5,R6     // R11 = R5 | R6  
+MUL  R5,R6,R7      // R5 = R6 * R7  
+SLT  R5,R11,R12    // If R11 < R12, R5 = 1; else R5 = 0  
+
