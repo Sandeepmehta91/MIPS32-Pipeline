@@ -15,8 +15,7 @@ The processor is built with a **classic 5-stage pipeline**, making it efficient 
 - [Pipelined Datapath](#-pipelined-datapath)
 - [Verilog Design Code](#-verilog-design-code)
 - [Testbench and Example Program](#-testbench-and-example-program)
-- [Run on EDAPlayground](#-run-on-edaplayground)
-- [Known Limitations](#-known-limitations)
+- [Waveforms](#-run-on-edaplayground)
 - [References](#-references)
 
 ---
@@ -318,4 +317,5 @@ module test_mips32;
         #300 $finish;
     end
 endmodule
+
 
