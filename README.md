@@ -75,4 +75,9 @@ Not all instructions of MIPS32 are implemented. For simplicity, only a subset of
   ### Pipelined DataPath
 
 ![MIPS32 Pipelined DataPath](images/pipelined_datapath.png)
+## Pipelined Datapath
+
+Below is the 5-stage pipelined datapath used in this project:
+
+![MIPS32 Pipelined Datapath](pipelined_datapath.png)
 
